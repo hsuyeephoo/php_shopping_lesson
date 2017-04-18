@@ -1,0 +1,27 @@
+RewriteEngine On
+Options -Indexes
+
+
+RewriteRule ^mailBody mailBody.php [NC,L]
+RewriteRule ^mail mail.php [NC,L]
+RewriteRule ^category(.*) index.php?cat_id=$1 [NC,L]
+RewriteRule ^login$  /auth/login.php [NC,L]
+RewriteRule ^register$ /auth/register.php [NC,L]
+
+RewriteRule ^dashboard$ /user/dashboard.php [NC,L]
+RewriteRule ^categories /product/category.php [NC,L]
+
+RewriteRule ^updateProduct$ /product/updateProduct.php [NC,L]
+RewriteRule ^deleteProduct$ /product/deleteProduct.php [NC,L]
+
+RewriteRule ^deleteCat$ /product/deleteCategory.php [NC,L]
+
+RewriteRule ^addToCart$ /cart/addToCart.php [NC,L]
+RewriteRule ^showCart$ /cart/showCart.php [NC,L]
+
+RewriteRule ^cartDetail /cart/cartDetail.php [NC,L]
+RewriteRule ^clearCart /cart/clearCart.php [NC,L]
+RewriteRule ^confirmOrder /cart/confirmOrder.php [NC,L]
+RewriteRule ^orders /user/orders.php [NC,L]
+
+RewriteRule ^myOrders /user/adminOrder.php [NC,L]
